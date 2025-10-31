@@ -1,69 +1,99 @@
 "use client";
 
-import { Bot, Plug, BarChart3, TextSearch } from "lucide-react";
+import { Target, Heart, Shield, FileText, ExternalLink } from "lucide-react";
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function FeatureSection9() {
   return (
     <section
       className="bg-secondary section-padding-y border-b"
-      id="how-it-works"
+      id="quem-somos"
     >
       <div className="container-padding-x container mx-auto flex flex-col gap-10 md:gap-12">
         <div className="section-title-gap-lg mx-auto flex max-w-xl flex-col items-center text-center">
-          <Tagline>How it works</Tagline>
+          <Tagline>Quem Somos</Tagline>
           <h2 className="heading-lg text-foreground">
-            Get started in 2 minutes
+            Nossa missão e valores
           </h2>
           <p className="text-muted-foreground text-base">
-            Explain in one or two concise sentences how your solution transforms
-            users&apos; challenges into positive outcomes.
+            Conheça os pilares que norteiam nosso compromisso com a saúde e inclusão da comunidade surda
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4">
+
+        {/* Missão e Valores */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:gap-8">
+          {/* Missão */}
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <Plug className="text-primary h-5 w-5" />
+            <div className="bg-blue-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
+              <Target className="text-blue-600 h-7 w-7" />
             </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-foreground font-semibold">1. Connect</h3>
-              <p className="text-muted-foreground">
-                Integrate with Zoom, Teams, Google Meet, or Slack
+            <div className="flex flex-col gap-3">
+              <h3 className="text-foreground font-semibold text-lg">Missão</h3>
+              <p className="text-muted-foreground text-base">
+                Cuidar com excelência da saúde dos nossos clientes em todas as etapas da vida.
               </p>
             </div>
           </div>
+
+          {/* Valores */}
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <Bot className="text-primary h-5 w-5" />
+            <div className="bg-orange-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
+              <Heart className="text-orange-600 h-7 w-7" />
             </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-foreground font-semibold">2. Capture</h3>
-              <p className="text-muted-foreground">
-                AI joins and transcribes in real-time as you speak with
-                teammates
+            <div className="flex flex-col gap-3">
+              <h3 className="text-foreground font-semibold text-lg">Valores</h3>
+              <p className="text-muted-foreground text-base">
+                Saúde, humanização, inovação, aprendizado diário, cabeça de dono, integridade, diversidade.
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <BarChart3 className="text-primary h-5 w-5" />
+        </div>
+
+        {/* Bloco Regulatório */}
+        <div className="bg-background rounded-xl border p-6 md:p-8">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-4 md:flex-1">
+              <div className="flex items-start gap-3">
+                <div className="bg-secondary flex h-10 w-10 shrink-0 items-center justify-center rounded-lg">
+                  <Shield className="text-primary h-5 w-5" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-foreground font-semibold text-lg">
+                    Conformidade Regulatória
+                  </h3>
+                  <p className="text-muted-foreground text-base">
+                    Solução tecnológica inovadora e segura, seguindo protocolos exigidos pelos órgãos reguladores —{" "}
+                    <strong>Lei Federal nº 14.510/22</strong> e{" "}
+                    <strong>Resolução CFM nº 2.134/2022</strong>.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-foreground font-semibold">3. Transform</h3>
-              <p className="text-muted-foreground">
-                Get instant meeting summaries, actions, and insights
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-background flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border shadow-[0px_0px_0px_4px_rgba(7,46,106,0.05)]">
-              <TextSearch className="text-primary h-5 w-5" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-foreground font-semibold">4. Discover</h3>
-              <p className="text-muted-foreground">
-                Search and connect knowledge across all meetings
-              </p>
+            <div className="flex flex-col gap-3 md:flex-row md:gap-3">
+              <Link
+                href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14510.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="w-full md:w-auto">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Lei / Senado
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link
+                href="https://sistemas.cfm.org.br/normas/visualizar/resolucoes/BR/2022/2134"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" className="w-full md:w-auto">
+                  <FileText className="mr-2 h-4 w-4" />
+                  Resolução CFM
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
