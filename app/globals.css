@@ -6,7 +6,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: Onest, sans-serif;
   --font-mono: Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -31,8 +30,8 @@
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
+  --color-primary-foreground: #fff;
+  --color-primary: var(--purple-600);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -67,6 +66,14 @@
   --inset-shadow-2xs: inset 0 1px 0 0 oklch(0.545 0.161 295.179 / 0.05);
   --inset-shadow-xs: inset 0 1px 1px 0 oklch(0.545 0.161 295.179 / 0.05);
   --inset-shadow-sm: inset 0 2px 4px 0 oklch(0.545 0.161 295.179 / 0.05);
+
+  /* Marca e utilitárias */
+  --green-500: #70ba41;      /* verde padrão/positivo */
+  --green-700: #4f832e;      /* verde para colocar sobre branco */
+  --teal-500: #5ab7c8;       /* teal principal (NÃO usar texto branco sobre esta cor) */
+  --teal-700: #2f818f;       /* teal seguro para sobre branco (para texto/CTAs) */
+  --purple-600: #565291;     /* roxo principal */
+  --gray-neutral: #d2d3d5;   /* cinza neutro */
 }
 
 :root {
@@ -77,8 +84,8 @@
   --card-foreground: oklch(0.282 0.087 267.935);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.282 0.087 267.935);
-  --primary: oklch(0.677 0.203 40.381);
-  --primary-foreground: oklch(1 0 0);
+  --primary: var(--purple-600);
+  --primary-foreground: #fff;
   --secondary: oklch(0.981 0.009 258.335);
   --secondary-foreground: oklch(0.282 0.087 267.935);
   --muted: oklch(0.984 0.003 247.858);
@@ -88,7 +95,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.677 0.203 40.381 / 0.1);
+  --ring: #2f818f1a;
   --chart-1: oklch(0.677 0.203 40.381);
   --chart-2: oklch(0.677 0.157 35.096);
   --chart-3: oklch(0.379 0.044 226.154);
@@ -102,6 +109,14 @@
   --sidebar-accent-foreground: oklch(0.282 0.087 267.935);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.929 0.013 255.508);
+
+  /* Marca e utilitárias */
+  --green-500: #70ba41;      /* verde padrão/positivo */
+  --green-700: #4f832e;      /* verde para colocar sobre branco */
+  --teal-500: #5ab7c8;       /* teal principal (NÃO usar texto branco sobre esta cor) */
+  --teal-700: #2f818f;       /* teal seguro para sobre branco (para texto/CTAs) */
+  --purple-600: #565291;     /* roxo principal */
+  --gray-neutral: #d2d3d5;   /* cinza neutro */
 }
 
 @theme {
@@ -115,37 +130,53 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans), Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   }
   button {
     cursor: pointer;
   }
+  h1, h2 {
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+    color: var(--teal-700);
+  }
+  h1 {
+    font-weight: 700;
+  }
+  h2 {
+    font-weight: 600;
+  }
   .heading-xl {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 3rem;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.01em;
+    color: var(--teal-700);
   }
   .heading-lg {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 2.25rem;
     line-height: 1.111;
     font-weight: 600;
     letter-spacing: -0.01em;
+    color: var(--teal-700);
   }
   .heading-md {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.875rem;
     line-height: 1.2;
     font-weight: 600;
     letter-spacing: -0.01em;
+    color: var(--teal-700);
   }
   .heading-sm {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     line-height: 1.333;
     font-weight: 600;
     letter-spacing: -0.01em;
+    color: var(--teal-700);
   }
   .container-padding-x {
     padding-inline: 1.5rem;
@@ -172,21 +203,25 @@
     font-size: 1.875rem;
     line-height: 1.2;
     font-weight: 700;
+    color: var(--teal-700);
   }
   .heading-lg {
     font-size: 1.875rem;
     line-height: 1.2;
     font-weight: 700;
+    color: var(--teal-700);
   }
   .heading-md {
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: 700;
+    color: var(--teal-700);
   }
   .heading-sm {
     font-size: 1.5rem;
     line-height: 1.333;
     font-weight: 700;
+    color: var(--teal-700);
   }
   .container-padding-x {
     padding-inline: 1.5rem;
@@ -210,19 +245,23 @@
 
 @media screen and (max-width: 80rem) {
   .heading-xl {
-    font-family: Onest;
-    font-weight: 600;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: var(--teal-700);
   }
   .heading-lg {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-weight: 600;
+    color: var(--teal-700);
   }
   .heading-md {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-weight: 600;
+    color: var(--teal-700);
   }
   .heading-sm {
-    font-family: Onest;
+    font-family: var(--font-heading), Poppins, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     font-weight: 600;
+    color: var(--teal-700);
   }
 }

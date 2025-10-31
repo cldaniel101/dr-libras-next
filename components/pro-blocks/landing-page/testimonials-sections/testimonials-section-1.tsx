@@ -10,14 +10,14 @@ interface TestimonialsSection1Props {
 }
 
 export default function TestimonialsSection1({
-  quote = "MindSpace is like having a photographic memory for every meeting. We reduced the follow-up emails by 80%.",
+  quote = "Dr. Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%.",
   authorName = "David Park",
   authorRole = "Engineering Manager at TechCorp",
   avatarSrc = "/DavidPark.png",
 }: TestimonialsSection1Props) {
   return (
     <section
-      className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-blue-950"
+      className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-green-500"
       aria-labelledby="testimonial-title"
     >
       {/* Content Container */}

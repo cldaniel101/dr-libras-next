@@ -37,6 +37,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Cores de marca e utilitárias */
+  --green-500: #70ba41;      /* verde padrão/positivo */
+  --green-700: #4f832e;      /* verde para colocar sobre branco */
+
+  --teal-500: #5ab7c8;       /* teal principal (NÃO usar texto branco sobre esta cor) */
+  --teal-700: #2f818f;       /* teal seguro para sobre branco (para texto/CTAs) */
+
+  --purple-600: #565291;     /* roxo principal */
+  --gray-neutral: #d2d3d5;   /* cinza neutro */
 }
 
 .dark {
@@ -72,6 +82,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Cores de marca e utilitárias (também disponíveis no dark mode) */
+  --green-500: #70ba41;
+  --green-700: #4f832e;
+  --teal-500: #5ab7c8;
+  --teal-700: #2f818f;
+  --purple-600: #565291;
+  --gray-neutral: #d2d3d5;
 }
 
 @theme inline {
@@ -113,6 +131,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Variáveis utilitárias de cor para uso em todo o projeto */
+  --color-green-500: var(--green-500);
+  --color-green-700: var(--green-700);
+  --color-teal-500: var(--teal-500);
+  --color-teal-700: var(--teal-700);
+  --color-purple-600: var(--purple-600);
+  --color-gray-neutral: var(--gray-neutral);
 }
 
 @layer base {

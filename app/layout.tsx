@@ -1,17 +1,25 @@
 import type { Metadata } from "next";
-import { Onest } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
-const onest = Onest({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  weight: ["600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "MindSpace - template built with shadcndesign.com",
+  title: "Dr. Libras",
   description:
-    "MindSpace is a modern and clean SaaS shadcn/ui template built with Pro Blocks",
+    "O projeto Doutor Libras oferece atendimento médico remoto acessível à comunidade surda por meio de videochamadas com intérprete de Libras, promovendo inclusão e qualidade no cuidado à saúde.",
     generator: 'v0.app'
 };
 
@@ -22,9 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="pt-BR" suppressHydrationWarning>
         <head />
-        <body className={`${onest.variable} relative antialiased`}>
+        <body className={`${inter.variable} ${poppins.variable} font-sans relative antialiased`}>
           {children}
         </body>
       </html>

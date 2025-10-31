@@ -18,7 +18,7 @@ export function HeroSection2() {
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col">
             {/* Tagline */}
-            <Tagline>MindSpace</Tagline>
+            <Tagline>Dr. Libras</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="heading-xl">
               Never forget what was said in a meeting again

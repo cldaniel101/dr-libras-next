@@ -16,7 +16,7 @@ export default function Page() {
       <HeroSection2 />
       <LogoSection10 />
       <TestimonialsSection1
-        quote="MindSpace is like having a photographic memory for every meeting. We reduced the follow-up emails by 80%."
+        quote="Dr. Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%."
         authorName="David Park"
         authorRole="Engineering Manager at TechCorp"
         avatarSrc="/DavidPark.png"

@@ -54,30 +54,25 @@ export function FaqSection2() {
                 {/* FAQ Item 1 */}
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-left">
-                    How does MindSpace join my meetings?
+                    Como o Dr. Libras funciona nas consultas?
                   </AccordionTrigger>
                   <AccordionContent>
-                    MindSpace automatically joins your scheduled meetings
-                    through calendar integration. Simply connect your calendar
-                    (Google Calendar, Outlook, etc.) and MindSpace will join
-                    meetings at the scheduled time. You can also manually invite
-                    MindSpace to any meeting by adding our bot email to your
-                    meeting participants.
+                    O Dr. Libras oferece atendimento médico remoto acessível através de videochamadas com intérprete de Libras. 
+                    Basta agendar sua consulta e um médico qualificado estará disponível para atendê-lo com suporte completo 
+                    de intérprete de Libras, garantindo comunicação clara e efetiva durante todo o atendimento.
                   </AccordionContent>
                 </AccordionItem>
 
                 {/* FAQ Item 2 */}
                 <AccordionItem value="item-2">
                   <AccordionTrigger className="text-left">
-                    What languages does MindSpace support?
+                    Quais línguas o Dr. Libras suporta?
                   </AccordionTrigger>
                   <AccordionContent>
-                    MindSpace currently supports English, Spanish, French,
-                    German, Italian, Portuguese, and Japanese. We&apos;re
-                    continuously adding more languages based on user demand. The
-                    AI transcription and analysis work in the primary language
-                    of your meeting, with automatic language detection for
-                    mixed-language conversations.
+                    O Dr. Libras oferece atendimento em português com intérpretes de Libras qualificados. 
+                    Estamos continuamente trabalhando para expandir nossos serviços e garantir que toda a 
+                    comunidade surda tenha acesso a cuidados médicos de qualidade com comunicação efetiva 
+                    em Libras durante todas as consultas.
                   </AccordionContent>
                 </AccordionItem>
 
