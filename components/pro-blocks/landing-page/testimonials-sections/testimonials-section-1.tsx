@@ -17,7 +17,7 @@ export default function TestimonialsSection1({
 }: TestimonialsSection1Props) {
   return (
     <section
-      className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-green-500"
+      className="dark:bg-background container-padding-x section-padding-y flex flex-col items-center border-b bg-[#70ba41]"
       aria-labelledby="testimonial-title"
     >
       {/* Content Container */}

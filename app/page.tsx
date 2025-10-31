@@ -7,6 +7,7 @@ import { FaqSection2 } from "@/components/pro-blocks/landing-page/faq-sections/f
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1";
 import { SolutionsSection } from "@/components/pro-blocks/landing-page/solutions/solutions";
 import { ClubeDeBeneficios } from "@/components/pro-blocks/landing-page/clube-de-beneficios/clube-de-beneficios";
+import { PlanosSection } from "@/components/pro-blocks/landing-page/planos/planos";
 
 export default function Page() {
   return (
@@ -18,13 +19,13 @@ export default function Page() {
       <ClubeDeBeneficios />
       <FeatureSection9 />
       <TestimonialsSection1
-        quote="At TechStar, 43% of meeting content was forgotten within 24 hours. Now, the AI summaries are better than my own notes!"
-        authorName="Monica Kurt"
-        authorRole="Project Manager at TechStar"
-        avatarSrc="/MonicaKurt.png"
+        quote="Dr Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%. (texto de exemplo)"
+        authorName="Gabriel Nunes"
+        authorRole="Paciente da Dr Libras"
+        avatarSrc="/DavidPark.png"
       />
-      <PricingSection3 />
-      <FaqSection2 />
+      <PlanosSection />
+      {/* <FaqSection2 /> */}
       <Footer1 />
     </main>
   );

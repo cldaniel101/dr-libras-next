@@ -91,21 +91,21 @@ export function Footer1() {
               target="_blank"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Política de Privacidade
             </Link>
             <Link
               href="https://www.shadcndesign.com/pro-blocks"
               target="_blank"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Terms of Service
+              Termos de Serviço
             </Link>
             <Link
               href="https://www.shadcndesign.com/pro-blocks"
               target="_blank"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Cookies Settings
+              Configurações de Cookies
             </Link>
           </nav>
         </div>
