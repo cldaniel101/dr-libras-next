@@ -21,17 +21,16 @@ export function HeroSection2() {
             <Tagline>Dr. Libras</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="heading-xl">
-              Never forget what was said in a meeting again
+              Telemedicina com Intérprete em <span className="text-primary">Libras</span>, do jeito certo para você.
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
-              AI that joins, transcribes, and transforms your meetings into
-              structured knowledge
+              Atendimento humanizado, seguro e prático — sem deslocamentos. Entre agora no consultório online e fale com especialistas preparados para a comunidade surda.
             </p>
           </div>
 
           {/* Feature List */}
-          <div className="flex flex-col gap-2 md:gap-3">
+          {/* <div className="flex flex-col gap-2 md:gap-3">
             <div className="flex items-start gap-3">
               <div className="pt-0.5">
                 <Check className="text-primary h-5 w-5" />
@@ -58,13 +57,13 @@ export function HeroSection2() {
                 Automatic CRM updates
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button>Try for free</Button>
+            <Button>Consultório online</Button>
             <Button variant="ghost">
-              How it works
+              Quero Conhecer
               <ArrowRight />
             </Button>
           </div>

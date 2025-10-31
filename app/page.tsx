@@ -14,16 +14,10 @@ export default function Page() {
     <main>
       <LpNavbar1 />
       <HeroSection2 />
-      <LogoSection10 />
-      <TestimonialsSection1
-        quote="Dr. Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%."
-        authorName="David Park"
-        authorRole="Engineering Manager at TechCorp"
-        avatarSrc="/DavidPark.png"
-      />
+      {/* <LogoSection10 /> */}
+      <StatsSection4 />
       <BentoGrid6 />
       <FeatureSection9 />
-      <StatsSection4 />
       <TestimonialsSection1
         quote="At TechStar, 43% of meeting content was forgotten within 24 hours. Now, the AI summaries are better than my own notes!"
         authorName="Monica Kurt"

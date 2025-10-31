@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Dr. Libras",
   description:
     "O projeto Doutor Libras oferece atendimento médico remoto acessível à comunidade surda por meio de videochamadas com intérprete de Libras, promovendo inclusão e qualidade no cuidado à saúde.",
-    generator: 'v0.app'
+  generator: "v0.app",
 };
 
 export default function RootLayout({
@@ -29,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html lang="pt-BR" suppressHydrationWarning>
-        <head />
-        <body className={`${inter.variable} ${poppins.variable} font-sans relative antialiased`}>
-          {children}
-        </body>
-      </html>
-    </>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={`${inter.variable} ${poppins.variable} font-sans relative antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 }
