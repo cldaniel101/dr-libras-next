@@ -8,6 +8,7 @@ import { StatsSection4 } from "@/components/pro-blocks/landing-page/stats-sectio
 import { PricingSection3 } from "@/components/pro-blocks/landing-page/pricing-sections/pricing-section-3";
 import { FaqSection2 } from "@/components/pro-blocks/landing-page/faq-sections/faq-section-2";
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1";
+import { SolutionsSection } from "@/components/pro-blocks/landing-page/solutions/solutions";
 
 export default function Page() {
   return (
@@ -15,6 +16,7 @@ export default function Page() {
       <LpNavbar1 />
       <HeroSection2 />
       {/* <LogoSection10 /> */}
+      <SolutionsSection />
       <StatsSection4 />
       <BentoGrid6 />
       <FeatureSection9 />
