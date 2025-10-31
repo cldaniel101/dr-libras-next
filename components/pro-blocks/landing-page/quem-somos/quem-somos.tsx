@@ -5,7 +5,7 @@ import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export function FeatureSection9() {
+export function QuemSomosSection() {
   return (
     <section
       className="bg-secondary section-padding-y border-b"

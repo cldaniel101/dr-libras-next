@@ -1,7 +1,7 @@
 import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/lp-navbar-1";
 import { HeroSection2 } from "@/components/pro-blocks/landing-page/hero-sections/hero-section-2";
 import TestimonialsSection1 from "@/components/pro-blocks/landing-page/testimonials-sections/testimonials-section-1";
-import { FeatureSection9 } from "@/components/pro-blocks/landing-page/feature-sections/feature-section-9";
+import { QuemSomosSection } from "@/components/pro-blocks/landing-page/quem-somos/quem-somos";
 import { PricingSection3 } from "@/components/pro-blocks/landing-page/pricing-sections/pricing-section-3";
 import { FaqSection2 } from "@/components/pro-blocks/landing-page/faq-sections/faq-section-2";
 import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1";
@@ -17,7 +17,7 @@ export default function Page() {
       {/* <LogoSection10 /> */}
       <SolutionsSection />
       <ClubeDeBeneficios />
-      <FeatureSection9 />
+      <QuemSomosSection />
       <TestimonialsSection1
         quote="Dr Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%. (texto de exemplo)"
         authorName="Gabriel Nunes"
