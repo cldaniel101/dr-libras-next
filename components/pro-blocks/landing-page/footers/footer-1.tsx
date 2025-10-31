@@ -25,41 +25,40 @@ export function Footer1() {
             aria-label="Footer navigation"
           >
             <Link
-              href="/"
+              href="#quem-somos"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Home
+              Quem Somos
             </Link>
             <Link
-              href="#features"
+              href="/para-voce"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Features
+              Sou Paciente
             </Link>
             <Link
-              href="#how-it-works"
+              href="/para-empresas"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              How it works
+              Para Empresas
             </Link>
             <Link
-              href="https://www.shadcndesign.com/pro-blocks"
-              target="_blank"
+              href="/planos"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Docs
+              Planos
             </Link>
             <Link
-              href="#faq"
+              href="/embaixador"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              FAQ
+              Seja um Embaixador
             </Link>
             <Link
-              href="#pricing"
+              href="/clube"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Pricing
+              Clube de Benefícios
             </Link>
           </nav>
         </div>
@@ -71,23 +70,15 @@ export function Footer1() {
         <div className="flex w-full flex-col-reverse items-center gap-12 text-sm lg:flex-row lg:justify-between lg:gap-6">
           {/* Copyright Text */}
           <p className="text-muted-foreground text-center lg:text-left">
-            Built with{" "}
+            Criado por{" "}
             <Link
-              href="https://www.shadcndesign.com/pro-blocks"
+              href="https://www.danieldev.dev.br"
               className="underline"
               target="_blank"
             >
-              Pro Blocks
-            </Link>{" "}
-            by{" "}
-            <Link
-              href="https://www.shadcndesign.com/"
-              className="underline"
-              target="_blank"
-            >
-              shadcndesign.com
-            </Link>
-            . All rights reserved.
+              Daniel Dev
+            </Link>{""}
+            . Todos os direitos reservados.
           </p>
 
           {/* Legal Navigation */}

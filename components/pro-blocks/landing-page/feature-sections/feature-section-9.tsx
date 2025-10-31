@@ -26,8 +26,8 @@ export function FeatureSection9() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-6 lg:gap-8">
           {/* Missão */}
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-blue-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
-              <Target className="text-blue-600 h-7 w-7" />
+            <div className="bg-teal-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
+              <Target className="text-teal-700 h-7 w-7" />
             </div>
             <div className="flex flex-col gap-3">
               <h3 className="text-foreground font-semibold text-lg">Missão</h3>
@@ -39,8 +39,8 @@ export function FeatureSection9() {
 
           {/* Valores */}
           <div className="flex flex-col items-center gap-5 text-center">
-            <div className="bg-orange-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
-              <Heart className="text-orange-600 h-7 w-7" />
+            <div className="bg-green-100 flex h-16 w-16 shrink-0 items-center justify-center rounded-full">
+              <Heart className="text-[#4f832e] h-7 w-7" />
             </div>
             <div className="flex flex-col gap-3">
               <h3 className="text-foreground font-semibold text-lg">Valores</h3>
