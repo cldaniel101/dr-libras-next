@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function ClubeDeBeneficios() {
   return (
-    <section className="bg-background section-padding-y border-b" id="features">
+    <section className="bg-background section-padding-y border-b" id="clube">
       <div className="container-padding-x container mx-auto flex flex-col gap-10 md:gap-12">
         {/* Section Title */}
         <div className="section-title-gap-lg mx-auto flex max-w-3xl flex-col items-center text-center">
@@ -116,7 +116,7 @@ export function ClubeDeBeneficios() {
 
         {/* CTA Section */}
         <div className="flex flex-col items-center gap-6">
-          <Link href="/clube">
+          <Link href="#clube">
             <Button size="lg" className="text-base">
               Fazer parte do Clube
             </Button>

@@ -134,7 +134,7 @@ export function PlanosSection() {
     <section
       className="bg-secondary section-padding-y border-b"
       aria-labelledby="pricing-section-title-3"
-      id="pricing"
+      id="planos"
     >
       <div className="container-padding-x container mx-auto">
         <div className="flex flex-col items-center gap-10 md:gap-12">

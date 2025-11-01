@@ -11,9 +11,9 @@ const MENU_ITEMS = [
   { label: "Quem Somos", href: "#quem-somos" },
   { label: "Sou Paciente", href: "/para-voce" },
   { label: "Para Empresas", href: "/para-empresas" },
-  { label: "Planos", href: "/planos" },
+  { label: "Planos", href: "#planos" },
   { label: "Seja um Embaixador", href: "/embaixador" },
-  { label: "Clube de Benefícios", href: "/clube" },
+  { label: "Clube de Benefícios", href: "#clube" },
   // Estes terão FUTURAMENTE
   // { label: "Social", href: "/social" },
   // { label: "Educacional", href: "/educacional" },
@@ -27,16 +27,16 @@ interface NavMenuItemsProps {
 }
 
 const NavMenuItems = ({ className = "", onNavigate }: NavMenuItemsProps) => (
-  <div className={`flex flex-col gap-1 md:flex-row ${className}`}>
+  <div className={`flex flex-col gap-1 xl:flex-row ${className}`}>
     {MENU_ITEMS.map(({ label, href }) => (
       <Link key={label} href={href} passHref legacyBehavior>
         <a
           onClick={onNavigate}
-          className="w-full md:w-auto"
+          className="w-full xl:w-auto"
           tabIndex={0}
           style={{ textDecoration: "none" }}
         >
-          <Button variant="ghost" className="w-full md:w-auto">{label}</Button>
+          <Button variant="ghost" className="w-full xl:w-auto text-sm">{label}</Button>
         </a>
       </Link>
     ))}
@@ -51,14 +51,14 @@ export function LpNavbar1() {
 
   return (
     <nav className="bg-background sticky top-0 isolate z-50 border-b py-3.5 md:py-4">
-      <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 md:flex-row md:items-center md:gap-6">
+      <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 xl:flex-row xl:items-center xl:gap-6">
         <div className="flex items-center justify-between">
           <Link href="/">
             <Logo />
           </Link>
           <Button
             variant="ghost"
-            className="flex size-9 items-center justify-center md:hidden"
+            className="flex size-9 items-center justify-center xl:hidden"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
@@ -67,7 +67,7 @@ export function LpNavbar1() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden w-full flex-row justify-end gap-5 md:flex md:items-center">
+        <div className="hidden w-full flex-row justify-end gap-5 xl:flex xl:items-center">
           <NavMenuItems />
           <div className="flex gap-2">
             <Link href="/consultorio-online">
@@ -81,7 +81,7 @@ export function LpNavbar1() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="flex w-full flex-col justify-end gap-4 pb-2.5 md:hidden">
+          <div className="flex w-full flex-col justify-end gap-4 pb-2.5 xl:hidden">
             <NavMenuItems onNavigate={closeMenu} />
             <div className="flex flex-col gap-2">
               <Link href="/consultorio-online">
