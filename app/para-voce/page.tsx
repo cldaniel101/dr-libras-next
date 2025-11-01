@@ -77,7 +77,9 @@ export default function ParaVocePage() {
             </div>
 
             {/* Lado visual */}
-            <Image src="/sou-paciente.jpg" alt="Para você" width={500} height={500} className="rounded-2xl w-full h-full object-cover" />
+            <div className="relative">
+              <Image src="/sou-paciente.jpg" alt="Para você" width={600} height={600} className="rounded-2xl backdrop-blur shadow-xl border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl" />
+            </div>
           </div>
         </section>
 

@@ -16,7 +16,7 @@ const solutions = [
   },
   {
     title: "Planos com consultas ilimitadas",
-    href: "/planos",
+    href: "#planos",
     comingSoon: false,
     value: "Ilimitadas",
     description: "Acesso ilimitado a consultas médicas por videochamada com intérprete em Libras, sem limites mensais ou anuais.",
@@ -30,7 +30,7 @@ const solutions = [
   },
   {
     title: "Clube de Benefícios",
-    href: "/clube",
+    href: "#clube",
     comingSoon: false,
     value: "+50",
     description: "Descontos exclusivos em serviços de saúde, farmácias, exames e muito mais para membros do clube.",

@@ -73,13 +73,13 @@ export default function EmbaixadorPage() {
             </div>
 
             {/* Área visual */}
-            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+            <div className="relative">
               <Image 
                 src="/embaixador.jpg" 
                 alt="Embaixador" 
                 width={600} 
                 height={600} 
-                className="w-full h-auto object-cover" 
+                className="rounded-2xl backdrop-blur shadow-xl border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl" 
               />
             </div>
           </div>
