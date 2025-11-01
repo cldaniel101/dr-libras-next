@@ -9,11 +9,11 @@ import Link from "next/link";
 // Define your menu items for multi-page scenario
 const MENU_ITEMS = [
   { label: "Quem Somos", href: "#quem-somos" },
+  { label: "Clube de Benefícios", href: "#clube" },
+  { label: "Planos", href: "#planos" },
   { label: "Sou Paciente", href: "/para-voce" },
   { label: "Para Empresas", href: "/para-empresas" },
-  { label: "Planos", href: "#planos" },
   { label: "Seja um Embaixador", href: "/embaixador" },
-  { label: "Clube de Benefícios", href: "#clube" },
   // Estes terão FUTURAMENTE
   // { label: "Social", href: "/social" },
   // { label: "Educacional", href: "/educacional" },

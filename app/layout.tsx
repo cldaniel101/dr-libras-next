@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   title: "Dr. Libras",
   description:
     "O projeto Doutor Libras oferece atendimento médico remoto acessível à comunidade surda por meio de videochamadas com intérprete de Libras, promovendo inclusão e qualidade no cuidado à saúde.",
-  generator: "v0.app",
 };
 
 export default function RootLayout({
