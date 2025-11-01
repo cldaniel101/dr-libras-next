@@ -3,6 +3,8 @@ import React from "react";
 import { LpNavbar1 } from "@/components/pro-blocks/landing-page/lp-navbars/lp-navbar-1";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShieldCheck, Users, Gift } from "lucide-react";
+import Image from "next/image";
+import { Footer1 } from "@/components/pro-blocks/landing-page/footers/footer-1";
 
 export default function EmbaixadorPage() {
   return (
@@ -12,7 +14,7 @@ export default function EmbaixadorPage() {
 
       {/* Hero */}
       <main className="bg-secondary/40 min-h-screen">
-        <section className="container mx-auto px-6 py-14 lg:py-16">
+        <section className="container mx-auto px-6 py-14 lg:py-16 mb-24">
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             {/* Texto */}
             <div className="flex flex-col gap-5">
@@ -22,7 +24,7 @@ export default function EmbaixadorPage() {
 
               <h1 className="text-3xl leading-tight font-bold text-slate-900 md:text-4xl">
                 Indique, represente e ajude a levar{" "}
-                <span className="text-primary">atendimento acessível</span> para
+                <span className="text-[#2f818f]">atendimento acessível</span> para
                 a comunidade surda.
               </h1>
 
@@ -50,19 +52,19 @@ export default function EmbaixadorPage() {
               {/* mini highlights */}
               <div className="flex flex-wrap gap-4 pt-2">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="text-primary size-5" />
+                  <ShieldCheck className="text-[#70ba41] size-5" />
                   <span className="text-sm text-slate-700">
                     Treinamento e material oficial
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Gift className="text-primary size-5" />
+                  <Gift className="text-[#70ba41] size-5" />
                   <span className="text-sm text-slate-700">
                     Cashback e sorteios
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Users className="text-primary size-5" />
+                  <Users className="text-[#70ba41] size-5" />
                   <span className="text-sm text-slate-700">
                     Ponto de apoio da marca
                   </span>
@@ -71,50 +73,14 @@ export default function EmbaixadorPage() {
             </div>
 
             {/* Área visual */}
-            <div className="relative">
-              <div className="rounded-2xl bg-white shadow-xl p-6 md:p-7 lg:p-8">
-                <p className="text-sm font-semibold text-slate-900 mb-3">
-                  O que faz um Embaixador?
-                </p>
-                <ul className="space-y-3 text-sm text-slate-600">
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-6 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
-                      1
-                    </span>
-                    Criar conteúdo e falar em nome da Doutor Libras com apoio do
-                    time.
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-6 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
-                      2
-                    </span>
-                    Ser referência para apresentar o projeto a escolas,
-                    empresas, órgãos públicos e comunidade.
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-1 size-6 shrink-0 rounded-md bg-primary/10 text-primary flex items-center justify-center text-xs font-bold">
-                      3
-                    </span>
-                    Servir como suporte/ponto de apoio local.
-                  </li>
-                </ul>
-
-                <div className="mt-6 rounded-xl bg-secondary/40 p-3">
-                  <p className="text-xs uppercase text-slate-500 font-semibold mb-1">
-                    Benefício extra
-                  </p>
-                  <p className="text-sm text-slate-800 leading-relaxed">
-                    Embaixadores ativos participam de{" "}
-                    <span className="font-semibold text-primary">
-                      campanhas de cashback
-                    </span>{" "}
-                    e{" "}
-                    <span className="font-semibold text-primary">sorteios</span>{" "}
-                    exclusivos.
-                  </p>
-                </div>
-              </div>
-
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <Image 
+                src="/embaixador.jpg" 
+                alt="Embaixador" 
+                width={600} 
+                height={600} 
+                className="w-full h-auto object-cover" 
+              />
             </div>
           </div>
         </section>
@@ -122,7 +88,7 @@ export default function EmbaixadorPage() {
         {/* Como funciona */}
         <section
           id="como-funciona"
-          className="container mx-auto px-6 pb-14 lg:pb-16"
+          className="container mx-auto px-6 pb-14 lg:pb-16 mb-24"
         >
           <div className="flex flex-col gap-4 mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
@@ -140,7 +106,7 @@ export default function EmbaixadorPage() {
                 1
               </span>
               <h3 className="font-semibold text-slate-900">
-                1. Envie seu interesse
+                Envie seu interesse
               </h3>
               <p className="text-sm text-slate-600">
                 Mande um e-mail para{" "}
@@ -159,7 +125,7 @@ export default function EmbaixadorPage() {
                 2
               </span>
               <h3 className="font-semibold text-slate-900">
-                2. Receba o material e o treinamento
+                Receba o material e o treinamento
               </h3>
               <p className="text-sm text-slate-600">
                 Você recebe orientação para falar em nome da empresa e apresentar
@@ -172,7 +138,7 @@ export default function EmbaixadorPage() {
                 3
               </span>
               <h3 className="font-semibold text-slate-900">
-                3. Indique e acompanhe
+                Indique e acompanhe
               </h3>
               <p className="text-sm text-slate-600">
                 Cada indicação bem-sucedida gera benefícios, participação em
@@ -249,22 +215,22 @@ export default function EmbaixadorPage() {
           <div className="container mx-auto px-6 py-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-slate-900">
-                Pronto para representar a Doutor Libras?
+                Pronto para representar a <span className="text-[#2f818f]">Doutor Libras</span>?
               </h2>
               <p className="text-slate-600">
                 Envie um e-mail agora e receba as instruções de onboarding.
               </p>
             </div>
             <a href="mailto:embaixador@doutorlibras.com.br">
-              <Button className="gap-2">
-                embaixador@doutorlibras.com.br
-                <ArrowRight className="size-4" />
+              <Button className="gap-2 bg-[#4f832e] hover:bg-[#4f832e]/90">
+                Fale com a equipe
+                <ArrowRight className="size-4 text-white" />
               </Button>
             </a>
           </div>
         </section>
       </main>
+      <Footer1 />
     </>
   );
 }
-
