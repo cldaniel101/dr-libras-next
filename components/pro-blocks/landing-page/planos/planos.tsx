@@ -158,8 +158,6 @@ export function PlanosSection() {
 
           <div className="grid w-full gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {pricingData.plans.map((plan) => {
-              const hasNumericPrice = typeof plan.price === "number";
-
               return (
                 <Card
                   key={plan.name}
@@ -179,24 +177,21 @@ export function PlanosSection() {
                         >
                           {plan.name}
                         </h3>
-                        <p className="text-muted-foreground text-sm">
-                          {plan.description}
-                        </p>
                       </div>
 
                       <div className="flex flex-col gap-1">
-                        {hasNumericPrice ? (
+                        {typeof plan.price === "number" ? (
                           <div className="flex items-end gap-1">
                             <span className="text-4xl font-semibold">
                               R$
-                              {plan.price?.toLocaleString("pt-BR", {
+                              {(plan.price as number).toLocaleString("pt-BR", {
                                 minimumFractionDigits: 2,
                                 maximumFractionDigits: 2,
                               })}
                             </span>
-                            {plan.period ? (
+                            {"period" in plan && typeof (plan as any).period === "string" ? (
                               <span className="text-muted-foreground text-base">
-                                {plan.period}
+                                {(plan as any).period}
                               </span>
                             ) : null}
                           </div>
@@ -238,7 +233,7 @@ export function PlanosSection() {
                       <div className="flex flex-col gap-4">
                         {plan.features.map((feature, index) => (
                           <div key={index} className="flex items-start gap-3">
-                            <Check className="text-primary h-5 w-5 flex-shrink-0" />
+                            <Check className="text-primary h-5 w-5 shrink-0" />
                             <span className="text-muted-foreground flex-1 text-sm leading-relaxed">
                               {feature.name}
                             </span>
@@ -269,10 +264,6 @@ export function PlanosSection() {
               );
             })}
           </div>
-
-          <p className="text-muted-foreground text-center text-xs italic md:text-sm">
-            {pricingData.note}
-          </p>
         </div>
       </div>
     </section>

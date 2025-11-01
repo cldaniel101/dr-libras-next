@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} font-sans relative antialiased`}>
+      <body suppressHydrationWarning className={`${inter.variable} ${poppins.variable} font-sans relative antialiased`}>
         {children}
       </body>
     </html>
