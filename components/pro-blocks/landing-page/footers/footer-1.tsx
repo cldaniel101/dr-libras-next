@@ -3,8 +3,30 @@
 import { Logo } from "@/components/pro-blocks/logo";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { usePathname } from "next/navigation";
+
+// Define your menu items for multi-page scenario
+const MENU_ITEMS = [
+  { label: "Quem Somos", href: "#quem-somos" },
+  { label: "Clube de Benefícios", href: "#clube" },
+  { label: "Planos", href: "#planos" },
+  { label: "Sou Paciente", href: "/para-voce" },
+  { label: "Para Empresas", href: "/para-empresas" },
+  { label: "Seja um Embaixador", href: "/embaixador" },
+] as const;
 
 export function Footer1() {
+  const pathname = usePathname();
+
+  // Função para determinar o href correto baseado na página atual
+  const getHref = (href: string) => {
+    // Se é um anchor link e não estamos na home, redireciona para home com o anchor
+    if (href.startsWith("#") && pathname !== "/") {
+      return `/${href}`;
+    }
+    return href;
+  };
+
   return (
     <footer
       className="bg-background section-padding-y"
@@ -24,42 +46,15 @@ export function Footer1() {
             className="flex flex-col items-center gap-6 text-sm md:flex-row md:gap-8"
             aria-label="Footer navigation"
           >
-            <Link
-              href="#quem-somos"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Quem Somos
-            </Link>
-            <Link
-              href="/para-voce"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Sou Paciente
-            </Link>
-            <Link
-              href="/para-empresas"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Para Empresas
-            </Link>
-            <Link
-              href="/planos"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Planos
-            </Link>
-            <Link
-              href="/embaixador"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Seja um Embaixador
-            </Link>
-            <Link
-              href="/clube"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Clube de Benefícios
-            </Link>
+            {MENU_ITEMS.map(({ label, href }) => (
+              <Link
+                key={label}
+                href={getHref(href)}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
 
