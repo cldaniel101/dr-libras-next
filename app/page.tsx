@@ -16,7 +16,6 @@ export default function Page() {
       <HeroSection2 />
       {/* <LogoSection10 /> */}
       <SolutionsSection />
-      <ClubeDeBeneficios />
       <QuemSomos
         eyebrow="Sobre Nós"
         images={{
@@ -27,6 +26,7 @@ export default function Page() {
           ],
         }}
       />
+      <ClubeDeBeneficios />
       <TestimonialsSection1
         quote="Dr Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%. (texto de exemplo)"
         authorName="Gabriel Nunes"

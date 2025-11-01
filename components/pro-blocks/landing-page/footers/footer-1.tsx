@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 const MENU_ITEMS = [
   { label: "Quem Somos", href: "#quem-somos" },
   { label: "Clube de Benefícios", href: "#clube" },
-  { label: "Planos", href: "#planos" },
   { label: "Sou Paciente", href: "/para-voce" },
   { label: "Para Empresas", href: "/para-empresas" },
   { label: "Seja um Embaixador", href: "/embaixador" },

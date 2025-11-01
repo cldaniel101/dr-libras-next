@@ -11,7 +11,6 @@ import { usePathname } from "next/navigation";
 const MENU_ITEMS = [
   { label: "Quem Somos", href: "#quem-somos" },
   { label: "Clube de Benefícios", href: "#clube" },
-  { label: "Planos", href: "#planos" },
   { label: "Sou Paciente", href: "/para-voce" },
   { label: "Para Empresas", href: "/para-empresas" },
   { label: "Seja um Embaixador", href: "/embaixador" },
@@ -87,7 +86,7 @@ export function LpNavbar1() {
             <Link href="/consultorio-online">
               <Button variant="outline">Consultório online</Button>
             </Link>
-            <Link href="/contrate-agora">
+            <Link href={pathname !== "/" ? "/#planos" : "#planos"}>
               <Button>Contrate agora</Button>
             </Link>
           </div>
@@ -103,7 +102,7 @@ export function LpNavbar1() {
                   Consultório online
                 </Button>
               </Link>
-              <Link href="/contrate-agora">
+              <Link href={pathname !== "/" ? "/#planos" : "#planos"}>
                 <Button className="w-full" onClick={closeMenu}>
                   Contrate agora
                 </Button>
