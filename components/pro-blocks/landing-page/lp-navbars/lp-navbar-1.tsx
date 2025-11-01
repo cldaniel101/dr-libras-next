@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Define your menu items for multi-page scenario
 const MENU_ITEMS = [
@@ -24,27 +25,40 @@ const MENU_ITEMS = [
 interface NavMenuItemsProps {
   className?: string;
   onNavigate?: () => void;
+  currentPath?: string;
 }
 
-const NavMenuItems = ({ className = "", onNavigate }: NavMenuItemsProps) => (
-  <div className={`flex flex-col gap-1 xl:flex-row ${className}`}>
-    {MENU_ITEMS.map(({ label, href }) => (
-      <Link key={label} href={href} passHref legacyBehavior>
-        <a
-          onClick={onNavigate}
-          className="w-full xl:w-auto"
-          tabIndex={0}
-          style={{ textDecoration: "none" }}
-        >
-          <Button variant="ghost" className="w-full xl:w-auto text-sm">{label}</Button>
-        </a>
-      </Link>
-    ))}
-  </div>
-);
+const NavMenuItems = ({ className = "", onNavigate, currentPath = "/" }: NavMenuItemsProps) => {
+  // Função para determinar o href correto baseado na página atual
+  const getHref = (href: string) => {
+    // Se é um anchor link e não estamos na home, redireciona para home com o anchor
+    if (href.startsWith("#") && currentPath !== "/") {
+      return `/${href}`;
+    }
+    return href;
+  };
+
+  return (
+    <div className={`flex flex-col gap-1 xl:flex-row ${className}`}>
+      {MENU_ITEMS.map(({ label, href }) => (
+        <Link key={label} href={getHref(href)} passHref legacyBehavior>
+          <a
+            onClick={onNavigate}
+            className="w-full xl:w-auto"
+            tabIndex={0}
+            style={{ textDecoration: "none" }}
+          >
+            <Button variant="ghost" className="w-full xl:w-auto text-sm">{label}</Button>
+          </a>
+        </Link>
+      ))}
+    </div>
+  );
+};
 
 export function LpNavbar1() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -68,7 +82,7 @@ export function LpNavbar1() {
 
         {/* Desktop Navigation */}
         <div className="hidden w-full flex-row justify-end gap-5 xl:flex xl:items-center">
-          <NavMenuItems />
+          <NavMenuItems currentPath={pathname} />
           <div className="flex gap-2">
             <Link href="/consultorio-online">
               <Button variant="outline">Consultório online</Button>
@@ -82,7 +96,7 @@ export function LpNavbar1() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="flex w-full flex-col justify-end gap-4 pb-2.5 xl:hidden">
-            <NavMenuItems onNavigate={closeMenu} />
+            <NavMenuItems onNavigate={closeMenu} currentPath={pathname} />
             <div className="flex flex-col gap-2">
               <Link href="/consultorio-online">
                 <Button variant="outline" className="w-full" onClick={closeMenu}>

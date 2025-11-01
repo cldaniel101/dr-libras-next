@@ -8,15 +8,17 @@ export type QuemSomosProps = {
     small: { src: string; alt: string }[]; // length 2
   };
   className?: string;
+  id?: string;
 };
 
 export default function QuemSomos({
   eyebrow = "",
   images,
   className = "",
+  id = "quem-somos",
 }: QuemSomosProps) {
   return (
-    <section className={`w-full bg-white ${className}`}>
+    <section id={id} className={`w-full bg-white ${className}`}>
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16 lg:py-20">
         {/* GRID PRINCIPAL: texto à esquerda, imagens à direita */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14 items-stretch">
