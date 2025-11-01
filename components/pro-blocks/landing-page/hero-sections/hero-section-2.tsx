@@ -5,8 +5,97 @@ import { Check, ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import Image from "next/image";
+import { TypeAnimation } from 'react-type-animation';
+import { useEffect, useRef } from 'react';
 
 export function HeroSection2() {
+  const containerRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    // Adicionar estilo para cursor preto
+    const style = document.createElement('style');
+    style.textContent = `
+      .typing-animation-container .typing-cursor,
+      .typing-animation-container::after,
+      .typing-animation-container [class*="cursor"],
+      span[class*="cursor"] {
+        color: gray !important;
+      }
+      .typing-animation-container > span::after {
+        color: gray !important;
+      }
+    `;
+    style.setAttribute('data-typing-cursor', '');
+    if (!document.head.querySelector('style[data-typing-cursor]')) {
+      document.head.appendChild(style);
+    }
+
+    // Processar o texto para adicionar span na palavra "Libras"
+    const processText = () => {
+      if (containerRef.current) {
+        const container = containerRef.current;
+        let processed = false;
+        
+        // Processar todos os nós de texto
+        const walker = document.createTreeWalker(
+          container,
+          NodeFilter.SHOW_TEXT,
+          null
+        );
+        
+        const textNodes: Text[] = [];
+        let node;
+        while (node = walker.nextNode()) {
+          if (node.nodeValue && node.nodeValue.includes('Libras')) {
+            textNodes.push(node as Text);
+          }
+        }
+
+        textNodes.forEach((textNode) => {
+          const text = textNode.nodeValue || '';
+          if (text.includes('Libras') && !text.includes('<span')) {
+            const parts = text.split(/(Libras)/);
+            const fragment = document.createDocumentFragment();
+            
+            parts.forEach((part, index) => {
+              if (part === 'Libras') {
+                const span = document.createElement('span');
+                span.className = 'text-primary';
+                span.textContent = part;
+                fragment.appendChild(span);
+              } else if (part) {
+                fragment.appendChild(document.createTextNode(part));
+              }
+            });
+            
+            textNode.parentNode?.replaceChild(fragment, textNode);
+            processed = true;
+          }
+        });
+
+        // Fallback: usar innerHTML se o método acima não funcionar
+        if (!processed && container.innerHTML.includes('Libras') && !container.innerHTML.includes('text-primary')) {
+          container.innerHTML = container.innerHTML.replace(
+            /Libras/g,
+            '<span class="text-primary">Libras</span>'
+          );
+        }
+      }
+    };
+
+    // Executar imediatamente e depois em intervalos
+    processText();
+    const interval = setInterval(processText, 50);
+    
+    return () => {
+      clearInterval(interval);
+      const styleEl = document.head.querySelector('style[data-typing-cursor]');
+      if (styleEl) {
+        styleEl.remove();
+      }
+    };
+  }, []);
+
   return (
     <section
       className="bg-secondary section-padding-y"
@@ -21,7 +110,18 @@ export function HeroSection2() {
             <Tagline>Dr. Libras</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="heading-xl">
-              Telemedicina com Intérprete em <span className="text-primary">Libras</span>, do jeito certo para você.
+              <span ref={containerRef} className="typing-animation-container">
+                <TypeAnimation
+                  sequence={[
+                    'Telemedicina com Intérprete em Libras, do jeito certo para você.',
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={0}
+                  cursor={true}
+                />
+              </span>
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
@@ -77,7 +177,7 @@ export function HeroSection2() {
               alt="Hero visual"
               fill
               priority
-              className="h-full w-full rounded-xl object-cover"
+              className="h-full w-full rounded-xl object-cover backdrop-blur shadow-xl border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
             />
           </AspectRatio>
         </div>

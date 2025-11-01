@@ -249,8 +249,8 @@ export function PlanosSection() {
                                       <Info className="h-4 w-4 opacity-70" />
                                     </button>
                                   </TooltipTrigger>
-                                  <TooltipContent className="max-w-xs text-left">
-                                    <p>{feature.tooltip}</p>
+                                  <TooltipContent className="max-w-xs text-center">
+                                    <p className="text-center">{feature.tooltip}</p>
                                   </TooltipContent>
                                 </Tooltip>
                               </TooltipProvider>
