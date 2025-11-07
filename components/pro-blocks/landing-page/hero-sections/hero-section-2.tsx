@@ -1,12 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useRef } from 'react';
+import Link from "next/link";
+import { DISCOUNTS_APP_LINK } from "@/lib/links";
 
 export function HeroSection2() {
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -113,7 +115,7 @@ export function HeroSection2() {
               <span ref={containerRef} className="typing-animation-container">
                 <TypeAnimation
                   sequence={[
-                    'Telemedicina com Intérprete em Libras, do jeito certo para você.',
+                    'Saúde em Libras. Sem barreiras.',
                     1000,
                   ]}
                   wrapper="span"
@@ -125,7 +127,7 @@ export function HeroSection2() {
             </h1>
             {/* Description */}
             <p className="text-muted-foreground text-base lg:text-lg">
-              Atendimento humanizado, seguro e prático — sem deslocamentos. Entre agora no consultório online e fale com especialistas preparados para a comunidade surda.
+              A primeira telemedicina feita para Surdos, com atendimento 100% acessível.
             </p>
           </div>
 
@@ -161,12 +163,19 @@ export function HeroSection2() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col gap-3 sm:flex-row">
-            <Button>Consultório online</Button>
-            <Button variant="ghost">
-              Quero Conhecer
-              <ArrowRight />
+            <Button asChild size="lg">
+              <Link href="#comunidade-vip">Entrar no Grupo VIP</Link>
+            </Button>
+            <Button asChild variant="ghost" size="lg">
+              <Link href={DISCOUNTS_APP_LINK} className="flex items-center gap-2">
+                Baixar o App de Descontos
+                <ArrowRight className="h-5 w-5" />
+              </Link>
             </Button>
           </div>
+          <p className="text-muted-foreground text-sm lg:text-base">
+            Benefícios exclusivos para quem entrar antes do lançamento.
+          </p>
         </div>
 
         {/* Right Column */}

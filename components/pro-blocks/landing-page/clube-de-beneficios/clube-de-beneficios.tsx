@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { DISCOUNTS_APP_LINK } from "@/lib/links";
 
 export function ClubeDeBeneficios() {
   return (
@@ -16,11 +17,11 @@ export function ClubeDeBeneficios() {
           <Tagline>Clube de Benefícios</Tagline>
           {/* Main Heading */}
           <h2 className="heading-lg">
-            Descontos, conteúdos e cuidados exclusivos para você
+            Baixe agora: Clube de Descontos
           </h2>
           {/* Description */}
           <p className="text-muted-foreground text-base lg:text-lg">
-            Faça parte do nosso clube e tenha acesso a descontos, conteúdos e programas de cuidado contínuo pensados para você e sua família. Receba antes os cupons de sorteios e novidades dos novos produtos.
+            Ganhe acesso imediato a vários descontos exclusivos para você e sua família. É gratuito, é simples e é o seu primeiro benefício na comunidade Doutor Libras.
           </p>
         </div>
 
@@ -116,9 +117,9 @@ export function ClubeDeBeneficios() {
 
         {/* CTA Section */}
         <div className="flex flex-col items-center gap-6">
-          <Link href="#clube">
+          <Link href={DISCOUNTS_APP_LINK} target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="text-base">
-              Fazer parte do Clube
+              Baixar agora
             </Button>
           </Link>
         </div>
