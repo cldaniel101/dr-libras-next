@@ -73,22 +73,35 @@ export default function QuemSomos({
 
             <div className="space-y-6 text-neutral-700 leading-relaxed">
               <p>
-                Somos uma plataforma de Saúde Digital com o propósito de democratizar e ampliar o acesso à saúde através da telemedicina, quebrando a barreira da distância.
+                No Doutor Libras, acreditamos que comunicação é um direito, não um privilégio.
               </p>
               <p>
-                A consultas serão realizadas por vídeo chamadas seguras, garantindo sigilo, conforto e agilidade no cuidado à saúde.
+                Sabemos que milhares de Surdos enfrentam barreiras todos os dias para conseguir um simples atendimento médico.
               </p>
               <p>
-                O diferencial deste projeto, é o doutor Libras, uma iniciativa que integra a telemedicina com acessibilidade linguística para a comunidade surda.
+                Por isso, nascemos com um propósito claro: garantir acesso à saúde, benefícios e oportunidades para a comunidade Surda de todo o Brasil — tudo com atendimento 100% em Libras.
               </p>
               <p>
-                Por meio da Língua Brasileira de Sinais (LIBRAS), será possível garantir que paciente surdos ou com deficiência auditiva tenham pleno acesso às informações médicas e possam se comunicar de forma clara e efetiva.
+                Mais do que uma plataforma de telemedicina, o Doutor Libras é um movimento social de união e inclusão. Aqui, cada consulta, cada benefício e cada conquista são passos rumo a um Brasil mais acessível.
               </p>
               <p>
-                Durante a consulta, o paciente será atendido por um médico especializado, com o apoio de um intérprete de libras, presente na vídeochamada, atuando como mediador da comunicação. Isso assegura que todas as informações sobre sintomas, tratamentos e orientações sejam transmitidas de forma precisa, humanizada e inclusiva.
+                Conectamos tecnologia, empatia e representatividade para construir um espaço onde o Surdo é ouvido, compreendido e valorizado.
               </p>
+              <div>
+                <p className="mb-3">
+                  Nosso compromisso vai além da saúde:
+                </p>
+                <ul className="list-none space-y-2">
+                  <li>💙 oferecer benefícios exclusivos e cashback,</li>
+                  <li>📲 abrir oportunidades de educação e trabalho,</li>
+                  <li>🌍 fortalecer uma comunidade unida que fala a mesma Língua — Libras.</li>
+                </ul>
+              </div>
               <p>
-                Unimos tecnologia, saúde e inclusão, promovendo um atendimento médico de qualidade e sem barreiras de comunicação, contribuindo para a equidade no acesso à saúde para a comunidade surda.
+                Porque quando os Surdos se unem, toda uma geração conquista voz, respeito e futuro.
+              </p>
+              <p className="font-semibold text-neutral-900">
+                Doutor Libras — Saúde + Inclusão + Benefícios
               </p>
             </div>
           </div>
