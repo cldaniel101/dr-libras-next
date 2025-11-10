@@ -11,11 +11,11 @@ export const Logo: React.FC<LogoProps> = ({
 }) => {
   return (
     <img
-      src="/logos/LOGO PRINCIPAL 2 - png.png"
+      src="/logos/logo-colors-removebg.png"
       alt="Logo Doutor Libras"
       width={width}
       height={height}
-      className={`w-[120px] h-[32px] md:w-[135px] md:h-[36px] ${className}`}
+      className={`w-[120px] h-full md:w-[135px] md:h-full ${className}`}
       style={{ objectFit: "contain" }}
       draggable={false}
     />

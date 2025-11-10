@@ -63,7 +63,7 @@ export function LpNavbar1() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="bg-background sticky top-0 isolate z-50 border-b py-3.5 md:py-4">
+    <nav className="bg-[#70ba41] text-white sticky top-0 isolate z-50 border-b ">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 xl:flex-row xl:items-center xl:gap-6">
         <div className="flex items-center justify-between">
           <Link href="/">
@@ -84,7 +84,7 @@ export function LpNavbar1() {
           <NavMenuItems currentPath={pathname} />
           <div className="flex gap-2">
             <Link href="/consultorio-online">
-              <Button variant="outline">Consultório online</Button>
+              <Button variant="outline" className="text-[#565291]">Consultório online</Button>
             </Link>
             <Link href={pathname !== "/" ? "/#planos" : "#planos"}>
               <Button>Contrate agora</Button>
@@ -98,7 +98,7 @@ export function LpNavbar1() {
             <NavMenuItems onNavigate={closeMenu} currentPath={pathname} />
             <div className="flex flex-col gap-2">
               <Link href="/consultorio-online">
-                <Button variant="outline" className="w-full" onClick={closeMenu}>
+                <Button variant="outline" className="w-full text-[#565291]" onClick={closeMenu}>
                   Consultório online
                 </Button>
               </Link>
