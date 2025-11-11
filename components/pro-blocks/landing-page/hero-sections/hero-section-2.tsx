@@ -109,7 +109,7 @@ export function HeroSection2() {
           {/* Section Title */}
           <div className="section-title-gap-xl flex flex-col">
             {/* Tagline */}
-            <Tagline>Dr. Libras</Tagline>
+            <Tagline>Doutor Libras</Tagline>
             {/* Main Heading */}
             <h1 id="hero-heading" className="heading-xl">
               <span ref={containerRef} className="typing-animation-container">

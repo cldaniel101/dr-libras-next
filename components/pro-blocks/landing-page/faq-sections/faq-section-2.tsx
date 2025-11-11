@@ -54,10 +54,10 @@ export function FaqSection2() {
                 {/* FAQ Item 1 */}
                 <AccordionItem value="item-1">
                   <AccordionTrigger className="text-left">
-                    Como o Dr. Libras funciona nas consultas?
+                    Como o Doutor Libras funciona nas consultas?
                   </AccordionTrigger>
                   <AccordionContent>
-                    O Dr. Libras oferece atendimento médico remoto acessível através de videochamadas com intérprete de Libras. 
+                    O Doutor Libras oferece atendimento médico remoto acessível através de videochamadas com intérprete de Libras. 
                     Basta agendar sua consulta e um médico qualificado estará disponível para atendê-lo com suporte completo 
                     de intérprete de Libras, garantindo comunicação clara e efetiva durante todo o atendimento.
                   </AccordionContent>
@@ -66,10 +66,10 @@ export function FaqSection2() {
                 {/* FAQ Item 2 */}
                 <AccordionItem value="item-2">
                   <AccordionTrigger className="text-left">
-                    Quais línguas o Dr. Libras suporta?
+                    Quais línguas o Doutor Libras suporta?
                   </AccordionTrigger>
                   <AccordionContent>
-                    O Dr. Libras oferece atendimento em português com intérpretes de Libras qualificados. 
+                    O Doutor Libras oferece atendimento em português com intérpretes de Libras qualificados. 
                     Estamos continuamente trabalhando para expandir nossos serviços e garantir que toda a 
                     comunidade surda tenha acesso a cuidados médicos de qualidade com comunicação efetiva 
                     em Libras durante todas as consultas.

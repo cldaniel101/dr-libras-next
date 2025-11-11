@@ -63,7 +63,7 @@ export function LpNavbar1() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="bg-[#70ba41] text-white sticky top-0 isolate z-50 border-b ">
+    <nav className="bg-[#2f818f] text-white sticky top-0 isolate z-50 border-b ">
       <div className="relative container m-auto flex flex-col justify-between gap-4 px-6 xl:flex-row xl:items-center xl:gap-6">
         <div className="flex items-center justify-between">
           <Link href="/">

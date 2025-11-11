@@ -19,7 +19,7 @@ export default function EmbaixadorPage() {
             {/* Texto */}
             <div className="flex flex-col gap-5">
               <p className="inline-flex w-fit rounded-full bg-primary/10 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                Seja um Embaixador Dr. Libras
+                Seja um Embaixador Doutor Libras
               </p>
 
               <h1 className="text-3xl leading-tight font-bold text-slate-900 md:text-4xl">

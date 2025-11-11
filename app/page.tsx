@@ -31,9 +31,9 @@ export default function Page() {
       <ClubeDeBeneficios />
       <ComunidadeVipSection />
       <TestimonialsSection1
-        quote="Dr Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%. (texto de exemplo)"
+        quote="Doutor Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%. (texto de exemplo)"
         authorName="Gabriel Nunes"
-        authorRole="Paciente da Dr Libras"
+        authorRole="Paciente da Doutor Libras"
         avatarSrc="/DavidPark.png"
       />
       <PlanosSection />

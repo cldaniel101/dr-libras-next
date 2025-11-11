@@ -10,7 +10,7 @@ interface TestimonialsSection1Props {
 }
 
 export default function TestimonialsSection1({
-  quote = "Dr. Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%.",
+  quote = "Doutor Libras é como ter uma memória fotográfica para cada consulta. Reduzimos os emails de acompanhamento em 80%.",
   authorName = "David Park",
   authorRole = "Engineering Manager at TechCorp",
   avatarSrc = "/DavidPark.png",

@@ -15,7 +15,7 @@ import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import { VariantProps } from "class-variance-authority";
 
 const pricingData = {
-  tagline: "Planos Dr Libras",
+  tagline: "Planos Doutor Libras",
   title: "Planos com consultas virtuais ilimitadas",
   description: [
     "Planos com consultas virtuais ilimitadas com intérprete em Libras, para você, sua família ou sua empresa, sem burocracia.",
@@ -49,7 +49,7 @@ const pricingData = {
         {
           name: "Cupons de sorteios mensais (NOVO)",
           tooltip:
-            "Participe de sorteios exclusivos com prêmios pensados para a comunidade Dr Libras.",
+            "Participe de sorteios exclusivos com prêmios pensados para a comunidade Doutor Libras.",
         },
       ],
       price: null,
@@ -69,7 +69,7 @@ const pricingData = {
         {
           name: "Cashback de indicação (NOVO)",
           tooltip:
-            "Ganhe bônus quando alguém indicado por você fecha um plano Dr Libras.",
+            "Ganhe bônus quando alguém indicado por você fecha um plano Doutor Libras.",
         },
         {
           name: "Cashback de pagamento",
@@ -79,7 +79,7 @@ const pricingData = {
         {
           name: "Cupons de sorteios",
           tooltip:
-            "Mais chances de participar das campanhas exclusivas da Dr Libras.",
+            "Mais chances de participar das campanhas exclusivas da Doutor Libras.",
         },
       ],
       price: null,
