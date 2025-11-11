@@ -49,7 +49,15 @@ export function Footer1() {
         <div className="flex w-full flex-col items-center gap-10 text-center">
           {/* Logo Section */}
           <Link href="/" aria-label="Go to homepage">
-            <Logo />
+            <img
+              src="/logos/LOGO PRINCIPAL 2 - png.png"
+              alt="Logo Doutor Libras"
+              width={135}
+              height={36}
+              className="w-[120px] h-full md:w-[135px] md:h-full"
+              style={{ objectFit: "contain" }}
+              draggable={false}
+            />
           </Link>
 
           <div className="flex flex-col gap-3 text-muted-foreground text-base max-w-xl">
