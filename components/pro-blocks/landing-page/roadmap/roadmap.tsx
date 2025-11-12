@@ -2,15 +2,36 @@
 
 import { Tagline } from "@/components/pro-blocks/landing-page/tagline";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 import { Milestone } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import React from "react";
 
 const roadmapItems = [
-  { milestone: "1.000 clientes", label: "Telemedicina ativa" },
-  { milestone: "2.000 clientes", label: "Plataforma Educacional (Libras+)" },
-  { milestone: "5.000 clientes", label: "Serviço Social + Marketplace (MarketLibras)" },
-  { milestone: "10.000 clientes", label: "Banco Digital (LibrasConta)" },
+  {
+    milestone: "1.000 clientes",
+    label: "Telemedicina ativa",
+    imageSrc: "/new_logos/no_bg/1-removebg-preview.png",
+    imageAlt: "Ilustração representando o serviço de telemedicina",
+  },
+  {
+    milestone: "2.000 clientes",
+    label: "Plataforma Educacional (Libras+)",
+    imageSrc: "/new_logos/no_bg/2-removebg-preview.png",
+    imageAlt: "Logotipo para a plataforma educacional Libras+",
+  },
+  {
+    milestone: "5.000 clientes",
+    label: "Serviço Social + Marketplace (MarketLibras)",
+    imageSrc: "/new_logos/no_bg/3-removebg-preview.png",
+    imageAlt: "Logotipo voltado ao serviço social e marketplace MarketLibras",
+  },
+  {
+    milestone: "10.000 clientes",
+    label: "Banco Digital (LibrasConta)",
+    imageSrc: "/new_logos/no_bg/4-removebg-preview.png",
+    imageAlt: "Identidade visual do banco digital LibrasConta",
+  },
 ];
 
 const container = {
@@ -96,7 +117,7 @@ export function RoadmapSection() {
                     } as React.CSSProperties
                   }
                 >
-                  <CardContent className="flex items-start gap-4 p-5 pl-14 md:p-6 md:pl-16">
+                  <CardContent className="flex flex-col gap-5 p-5 pl-14 md:flex-row md:items-center md:justify-between md:gap-6 md:p-6 md:pl-16">
                     {/* Node */}
                     <span
                       className="absolute left-4 top-5 inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--teal-500)]/60 bg-white text-[var(--teal-700)] shadow-sm transition-transform duration-300 group-hover:scale-105 dark:bg-neutral-950"
@@ -106,7 +127,7 @@ export function RoadmapSection() {
                     </span>
 
                     {/* Content */}
-                    <div className="flex flex-col gap-1.5 text-left">
+                    <div className="flex flex-col gap-1.5 text-left md:max-w-[60%]">
                       <span className="text-lg font-semibold leading-none text-foreground md:text-xl">
                         {itemData.milestone}
                       </span>
@@ -119,6 +140,18 @@ export function RoadmapSection() {
                         className="mt-3 inline-block h-1.5 w-24 rounded-full bg-gradient-to-r from-[var(--purple-600)] via-[var(--teal-500)] to-[var(--green-500)] opacity-80 transition-all duration-300 group-hover:w-32"
                         aria-hidden
                       />
+                    </div>
+                    <div className="relative mx-auto flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] backdrop-blur supports-[backdrop-filter]:bg-white/40 md:mx-0 md:h-28 md:w-28">
+                      <div className="relative h-16 w-16 md:h-20 md:w-20 overflow-hidden">
+                        <Image
+                          src={itemData.imageSrc}
+                          alt={itemData.imageAlt}
+                          fill
+                          sizes="(min-width: 768px) 80px, 64px"
+                          className="object-cover scale-200 object-center drop-shadow-md"
+                          priority={false}
+                        />
+                      </div>
                     </div>
                   </CardContent>
 
@@ -142,7 +175,7 @@ export function RoadmapSection() {
           transition={{ duration: 0.5 }}
           className="text-center text-base font-medium text-foreground"
         >
-          Você faz parte da construção desta história.
+          Estamos criando a maior união nacional de Surdos para conquistar direitos, benefícios e oportunidades para a comunidade. Entre no grupo VIP e faça parte da mudança.
         </motion.p>
       </div>
     </section>

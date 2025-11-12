@@ -17,7 +17,6 @@ export default function Page() {
       <LpNavbar1 />
       <HeroSection2 />
       {/* <LogoSection10 /> */}
-      <SolutionsSection />
       <QuemSomos
         eyebrow="Sobre Nós"
         images={{
