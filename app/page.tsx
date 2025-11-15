@@ -10,10 +10,12 @@ import { ClubeDeBeneficios } from "@/components/pro-blocks/landing-page/clube-de
 import { PlanosSection } from "@/components/pro-blocks/landing-page/planos/planos";
 import { ComunidadeVipSection } from "@/components/pro-blocks/landing-page/comunidade-vip/comunidade-vip";
 import { RoadmapSection } from "@/components/pro-blocks/landing-page/roadmap/roadmap";
+import { LaunchModal } from "@/components/pro-blocks/landing-page/launch-modal/launch-modal";
 
 export default function Page() {
   return (
     <main>
+      <LaunchModal />
       <LpNavbar1 />
       <HeroSection2 />
       {/* <LogoSection10 /> */}
